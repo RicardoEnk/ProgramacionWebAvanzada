@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lineTo, moveTo y stroke</title>
+</head>
+<body>
+        <canvas id="miCanvas" width="800" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById('miCanvas');
+        const ctx = canvas.getContext('2d');
+      /*-----------------------------------------------------------------------------------------------*/
+      /*Linea*/
+      ctx.moveTo(600,250);
+        ctx.lineTo(200,50);
+        
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = 'black';
+
+        ctx.stroke();
+        ctx.beginPath();
+        /*---------------------------------------------------------------------------------------------*/
+        /*Triangulo*/
+        ctx.moveTo(600, 300);
+        ctx.lineTo(200, 100);
+        ctx.lineTo(270,300);
+        ctx.lineTo(600,300);
+
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = 'black';
+
+        ctx.fill();
+        ctx.stroke();
+        ctx.beginPath();
+        /*----------------------------------------------------------------------------------------------*/
+        /*Marco*/
+        ctx.moveTo(0,0);
+        ctx.lineTo(0,400);
+        ctx.lineTo(800,400);
+        ctx.lineTo(800,0);
+        ctx.lineTo(0,0);
+
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'black';
+
+        ctx.stroke();
+    </script>   
+</body>
+</html>
