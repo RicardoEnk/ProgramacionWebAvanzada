@@ -29,6 +29,11 @@
 
 
         ctx.beginPath();
+        ctx.arc(700, 70, 50, 0, 2 * Math.PI);
+        ctx.stroke();
+
+
+        ctx.beginPath();
         ctx.moveTo(0,0);
         ctx.lineTo(0,400);
         ctx.lineTo(800,400);
