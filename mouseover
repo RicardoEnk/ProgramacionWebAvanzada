@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouseover</title>
+</head>
+<body>
+    <canvas width="800" height="400" id="miCanvas"></canvas>
+
+    <script>
+        var canvas = document.getElementById("miCanvas"); 
+        var ctx = canvas.getContext('2d');
+
+        canvas.addEventListener('click', function(event) {
+            var x = event.clientX - canvas.getBoundingClientRect().left;
+            var y = event.clientY - canvas.getBoundingClientRect().top;
+            var Color = 'blue';
+
+            ctx.beginPath();
+            ctx.arc(x, y, 50, 0, 2 * Math.PI);
+            ctx.fillStyle = circleColor;
+            ctx.fill();
+            ctx.closePath();
+
+
+        });
+
+        addEventListener("mouseover", (event) => {
+            circleColor = getRandomColor();
+        });
+    
+
+
+        function getRandomColor() {
+            var codigo = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += codigo[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+            ctx.lineWidth = 3;
+
+            ctx.beginPath();
+            ctx.moveTo(0,0);
+            ctx.lineTo(0,400);
+            ctx.lineTo(800,400);
+            ctx.lineTo(800,0);
+            ctx.lineTo(0,0);
+            
+            ctx.stroke();
+            
+    </script>
+</body>
+</html>
