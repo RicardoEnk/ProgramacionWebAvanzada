@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mousedown</title>
+</head>
+<body>
+    <canvas width="800" height="400" id="miCanvas"></canvas>
+
+    <script>
+        var canvas = document.getElementById("miCanvas"); 
+        var ctx = canvas.getContext('2d');
+
+        canvas.addEventListener('click', function(event) {
+            var x = event.clientX - canvas.getBoundingClientRect().left;
+            var y = event.clientY - canvas.getBoundingClientRect().top;
+
+            ctx.beginPath();
+            ctx.arc(x, y, 50, 0, 2 * Math.PI);
+            ctx.fillStyle = 'gray';
+            ctx.fill();
+            ctx.closePath();
+
+        });
+
+            ctx.lineWidth = 3;
+
+            ctx.beginPath();
+            ctx.moveTo(0,0);
+            ctx.lineTo(0,400);
+            ctx.lineTo(800,400);
+            ctx.lineTo(800,0);
+            ctx.lineTo(0,0);
+            
+            ctx.stroke();
+            
+    </script>
+</body>
+</html>
