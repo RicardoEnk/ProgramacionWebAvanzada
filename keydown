@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keydown</title>
+</head>
+<body>
+
+    <canvas width="800" height="400" id="miCanvas"></canvas>
+
+    <script>
+        var canvas = document.getElementById("miCanvas"); 
+        var ctx = canvas.getContext('2d');
+        var x = 200 ,y = 200;
+
+        document.addEventListener("keydown",(e)=>{
+            console.log(e)
+        if(e.keyCode == 38){
+            y -= 10;
+        }
+        if(e.keyCode == 40){
+            y += 10;
+        }
+        if(e.keyCode == 37){
+             x -= 10;
+        }
+        if(e.keyCode == 39){
+             x += 10;
+        }
+        repintar();
+        }
+            /*
+            up 38
+            downn 40
+            rigth 39
+            left 37
+            */
+    );
+
+        function repintar()   {
+        ctx.fillStyle = "white";
+        ctx.fillRect(0,0,800,400);
+
+
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(0,0);
+        ctx.lineTo(0,400);
+        ctx.lineTo(800,400);
+        ctx.lineTo(800,0);
+        ctx.lineTo(0,0);
+        ctx.stroke();
+
+
+        ctx.fillStyle ="gray";
+        ctx.fillRect(x, y,50,50);
+        ctx.strokeRect(x, y,50,50);
+    }
+
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(0,0);
+        ctx.lineTo(0,400);
+        ctx.lineTo(800,400);
+        ctx.lineTo(800,0);
+        ctx.lineTo(0,0);
+
+        ctx.stroke();
+    
+    </script>
+</body>
+</html>
