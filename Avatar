@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar</title>
+</head>
+<body>
+    <canvas id="miCanvas" width="600" height="600"></canvas>
+
+    <script>
+        const canvas = document.getElementById("miCanvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = 'black';
+       // Cabeza
+       ctx.fillStyle = "#FCD0B4";
+        ctx.beginPath();
+        ctx.arc(260, 100, 60, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.closePath();
+        //orejas
+         ctx.fillStyle = "#FCD0B4";
+        ctx.beginPath();
+        ctx.ellipse(200, 100, 10, 15, 0, 0, Math.PI * 2); 
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.fillStyle = "#FCD0B4"; 
+        ctx.beginPath();
+        ctx.ellipse(320, 100, 10, 15, 0, 0, Math.PI * 2); 
+        ctx.fill();
+        ctx.closePath();
+        /*//Nariz 
+        ctx.fillStyle = "pink";
+        ctx.beginPath();
+        ctx.arc(260, 120, 5, 0, Math.PI * 2);
+        ctx.fill();*/
+        //Gorra
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc(260, 90, 65, 0, Math.PI, true);
+        ctx.fill();
+        ctx.fillStyle = "black";
+        ctx.fillRect(280, 75 , 70, 15);
+        // Dibujar el primer ojo
+        // Color blanco para el blanco del ojo
+        ctx.fillStyle = "white"; 
+        ctx.beginPath();
+        ctx.arc(240, 105, 12, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.closePath();
+
+        // Color negro para la pupila
+        ctx.fillStyle = "black"; 
+        ctx.beginPath();
+        ctx.arc(240, 105, 5, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.closePath();
+
+        // Dibujar el segundo ojo
+        // Color blanco para el blanco del ojo
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.arc(280, 105, 12, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.closePath();
+
+        // Color negro para la pupila
+        ctx.fillStyle = "black"; 
+        ctx.beginPath();
+        ctx.arc(280, 105, 5, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.closePath();
+
+        // Boca
+        ctx.beginPath();
+        ctx.arc(260, 120, 20, 0.2 * Math.PI, 0.8 * Math.PI);
+        ctx.stroke();
+        ctx.closePath();
+
+        //Cuello
+        ctx.beginPath();
+        ctx.fillStyle = "#FCD0B4";
+        ctx.fillRect(245, 150, 30, 30);
+        //Brazo Izquierdo
+        ctx.beginPath();
+        ctx.fillStyle = "#FCD0B4";
+        ctx.fillRect(170, 210, 30, 140);
+        ctx.fillStyle = "black";
+        ctx.fillRect(170, 175, 30, 50);
+        ctx.fillStyle = "#FCD0B4";
+        ctx.arc(185, 350, 15, 0, Math.PI, false);
+        ctx.fill();
+        //Brazo derecho
+        ctx.beginPath();
+        ctx.fillStyle = "#FCD0B4";
+        ctx.fillRect(320, 210, 30, 140);
+        ctx.fillStyle = "black";
+        ctx.fillRect(320, 175, 30, 50);
+        ctx.fill();
+        ctx.fillStyle = "#FCD0B4";
+        ctx.arc(335, 350, 15, 0, Math.PI, false);
+        ctx.fill();
+        //Cuerpo
+        ctx.beginPath();
+        ctx.fillStyle = "black";
+        ctx.fillRect(200, 175, 120, 170);
+        //pantalon
+        ctx.beginPath();
+        ctx.fillStyle = "#1560bd";
+        ctx.fillRect(200, 340, 120, 170);
+        ctx.fillStyle = "white";
+        ctx.fillRect(248, 370, 25, 150);
+       //La pura crema
+        ctx.beginPath();
+        ctx.fillStyle = "black";
+        ctx.fillRect(199, 505, 50, 30);
+        ctx.fillRect(186 , 515, 20, 20);
+        ctx.fillStyle = "black";
+        ctx.fillRect(272, 505, 50, 30);
+        ctx.fillRect(315, 515, 20, 20);
+        //MARCO
+        ctx.beginPath();
+        ctx.moveTo(0,0);
+        ctx.lineTo(0,600);
+        ctx.lineTo(600,600);
+        ctx.lineTo(600,0);
+        ctx.lineTo(0,0);
+        ctx.stroke();
+    </script>
+</body>
+</html>
