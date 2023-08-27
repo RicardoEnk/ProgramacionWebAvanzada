@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>paisaje</title>
+</head>
+<body>
+    <canvas id="miCanvas" width="800" height="600"></canvas>
+
+    <script>
+        const canvas = document.getElementById("miCanvas");
+        const ctx = canvas.getContext("2d");
+        //Fondo
+        ctx.fillStyle = '#87CEEB';
+        ctx.fillRect(0, 0, 800, 800);
+        //Suelo
+        ctx.fillStyle = '#966102';
+        ctx.fillRect(0, 350, 800, 75);
+        ctx.fillStyle = '#fcb434';
+        ctx.fillRect(140, 325, 50, 150);
+        ctx.fillRect(610, 325, 50, 150);
+        ctx.fillStyle = '#4c4c4c';
+        ctx.fillRect(150, 430, 500, 45);
+        ctx.fillStyle = '#6c9404';
+        ctx.fillRect(0, 485, 800, 40);
+        ctx.fillStyle = 'green';
+        ctx.fillRect(0, 475, 800, 25);
+        ctx.fillStyle = '#dcc474';
+        ctx.fillRect(0, 520, 800, 40);
+        ctx.fillStyle = '#644c04';
+        ctx.fillRect(0, 560, 800, 40);
+        //Casa
+        ctx.fillStyle = '#fcd463';
+        ctx.fillRect(195, 180, 400, 250);
+        ctx.fillStyle = '#4c4c4c';
+        ctx.fillRect(440, 325, 120, 25);
+        ctx.fillStyle = '#644c04';
+        ctx.fillRect(195, 250, 400, 5);
+        ctx.fillRect(195, 215, 400, 5);
+        ctx.fillRect(195, 285, 400, 5);
+        ctx.fillRect(195, 320, 400, 5);
+        ctx.fillRect(195, 355, 400, 5);
+        ctx.fillRect(195, 390, 400, 5);
+        ctx.fillRect(195, 425, 400, 5);
+        //Techo
+        ctx.fillStyle = '#808080';
+        ctx.fillRect(475, 70, 75, 100);
+        ctx.fillStyle = '#4c4c4c';
+        ctx.fillRect(467, 60, 90, 30);
+        ctx.beginPath();
+        ctx.moveTo(660, 200 );
+        ctx.lineTo(325,30);
+        ctx.lineTo(150  ,200);
+        ctx.lineTo(660,200);
+        ctx.fillStyle = "#b40c1c"
+        ctx.fill();
+        ctx.closePath();
+        //Ventanas
+        ctx.fillStyle = "#b40c1c"
+        ctx.fillRect(450, 225, 100, 100);
+        ctx.fillStyle = "white"
+        ctx.fillRect(505, 233, 40, 40);
+        ctx.fillRect(455, 280, 40, 40);
+        ctx.fillRect(455, 233, 40, 40);
+        ctx.fillRect(505, 280, 40, 40);
+        //Puerta
+        ctx.fillStyle = '#644c04';
+        ctx.fillRect(250, 230, 100, 200);
+        ctx.fillStyle = '#9c6c04';
+        ctx.fillRect(263, 245, 75, 175);
+        ctx.beginPath();
+        ctx.arc(330, 350, 5, 0, 2 * Math.PI);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.closePath();
+        //Vallas
+        ctx.fillStyle = '#fcb434';
+        ctx.fillRect(0, 325, 15, 150);
+        ctx.fillRect(25, 325, 50, 150);
+        ctx.fillRect(83, 325, 50, 150);
+        ctx.fillRect(665, 325, 50, 150);
+        ctx.fillRect(720, 325, 50, 150);
+        ctx.fillRect(775, 325, 25, 150);
+        //Marco del canvas
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = 'black';
+        ctx.beginPath();
+        ctx.moveTo(0,0);
+        ctx.lineTo(0,600);
+        ctx.lineTo(800,600);
+        ctx.lineTo(800,0);
+        ctx.lineTo(0,0);
+        ctx.stroke();
+    </script>
+</body>
+</html>
